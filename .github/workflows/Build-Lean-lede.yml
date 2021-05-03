@@ -17,7 +17,7 @@ jobs:
       env:
           DEBIAN_FRONTEND: noninteractive
       run: |
-        bash <(curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/prenv.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/prenv.sh)
         
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -26,8 +26,8 @@ jobs:
         
     - name: Download and Load custom configuration
       run: |
-        curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/x86_64/.config >.config
-        bash <(curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/diy.sh)
+        curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/x86_64/.config >.config
+        bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/diy.sh)
         make defconfig
         
     - name: Download package
@@ -80,7 +80,7 @@ jobs:
       env:
           DEBIAN_FRONTEND: noninteractive
       run: |
-        bash <(curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/prenv.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/prenv.sh)
         
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -89,8 +89,8 @@ jobs:
         
     - name: Download and Load custom configuration
       run: |
-        curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/rpi/.config >.config
-        bash <(curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/diy.sh)
+        curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/rpi/.config >.config
+        bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/diy.sh)
         make defconfig
         
     - name: Download package
@@ -144,7 +144,7 @@ jobs:
       env:
           DEBIAN_FRONTEND: noninteractive
       run: |
-        bash <(curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/prenv.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/prenv.sh)
         
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -153,8 +153,8 @@ jobs:
         
     - name: Download and Load custom configuration
       run: |
-        curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/mt7621/.config >.config
-        bash <(curl -fsSL https://raw.githubusercontent.com/1orz/My-action/master/lean-lede/diy.sh)
+        curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/mt7621/.config >.config
+        bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/diy.sh)
         make defconfig
         
     - name: Download package
