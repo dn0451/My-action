@@ -19,23 +19,23 @@ jobs:
       run: |
         bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/prenv.sh)
         
-    - name: Checkout repo
+    - name: 检出
       uses: actions/checkout@v2
       with:
         repository: coolsnowwolf/lede
         
-    - name: Download and Load custom configuration
+    - name: 加载客制化配置
       run: |
         curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/mt7621/.config >.config
         bash <(curl -fsSL https://raw.githubusercontent.com/dn0451/My-action/master/lean-lede/diy.sh)
         make defconfig
         
-    - name: Download package
+    - name: 加载包
       run: |
         make download -j8
         find dl -size -1024c -exec rm -f {} \;
         
-    - name: When Multi-core compile failure will be rollback to Single core compile
+    - name: 当多核编译失败时将回滚到单核编译
       run: |
         echo -e "$(nproc) thread compile"
         sudo df -h
